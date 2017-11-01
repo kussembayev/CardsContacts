@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jtp-lk-ddQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cards-->
+        <scene sceneID="uHk-8v-qPf">
+            <objects>
+                <navigationController id="Jtp-lk-ddQ" customClass="BaseNavigationController" customModule="CardsContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cards" image="cardsIco" id="spN-RL-Hi3"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gGn-Vu-7c7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lSm-jm-VMk" kind="relationship" relationship="rootViewController" id="GIB-pI-i9V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKF-rm-2EP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nVQ-eX-JlL">
+            <objects>
+                <viewController id="rYo-9L-bv9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vWU-6K-fny"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nju-sK-mdp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9pP-hk-YMW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQU-r4-fBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="841"/>
+        </scene>
+        <!--Cards View Controller-->
+        <scene sceneID="gmT-Dv-D6Q">
+            <objects>
+                <viewController storyboardIdentifier="CardsViewController" id="lSm-jm-VMk" customClass="CardsViewController" customModule="CardsContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ivt-ce-IyX"/>
+                        <viewControllerLayoutGuide type="bottom" id="dtj-1Q-ZUh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lp2-bW-DXO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QFg-ok-OaP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dtj-1Q-ZUh" firstAttribute="top" secondItem="QFg-ok-OaP" secondAttribute="bottom" id="HJ1-1J-egK"/>
+                            <constraint firstItem="QFg-ok-OaP" firstAttribute="top" secondItem="Ivt-ce-IyX" secondAttribute="bottom" id="Tgg-vA-Uew"/>
+                            <constraint firstItem="QFg-ok-OaP" firstAttribute="leading" secondItem="Lp2-bW-DXO" secondAttribute="leading" id="XLB-1A-dTG"/>
+                            <constraint firstAttribute="trailing" secondItem="QFg-ok-OaP" secondAttribute="trailing" id="cde-07-dNM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="s5i-Q7-qWc"/>
+                    <connections>
+                        <outlet property="tableView" destination="QFg-ok-OaP" id="kBD-gJ-yt4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSJ-yK-bbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cardsIco" width="30" height="25"/>
+    </resources>
+</document>

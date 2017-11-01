@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="260" id="KGk-i7-Jjw" customClass="UsersTableViewCell" customModule="CardsContacts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttx-r6-x5W">
+                        <rect key="frame" x="8" y="8" width="304" height="243.5"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kse-92-Ogb">
+                                <rect key="frame" x="8" y="13" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="amz-Sf-PvG">
+                                <rect key="frame" x="0.0" y="56" width="304" height="188"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="A9R-pr-2Ts"/>
+                                </constraints>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1j0-wV-ur5">
+                                <rect key="frame" x="256" y="8" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.70196078429999997" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5jh-6c-vrq"/>
+                                    <constraint firstAttribute="width" constant="40" id="fIB-6z-sVZ"/>
+                                </constraints>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YaV-Qk-xGW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1j0-wV-ur5" firstAttribute="leading" secondItem="Kse-92-Ogb" secondAttribute="trailing" constant="8" id="BRk-1r-V9D"/>
+                            <constraint firstItem="Kse-92-Ogb" firstAttribute="leading" secondItem="ttx-r6-x5W" secondAttribute="leading" constant="8" id="HZG-cS-hg4"/>
+                            <constraint firstAttribute="trailing" secondItem="1j0-wV-ur5" secondAttribute="trailing" constant="8" id="KaE-Ra-elL"/>
+                            <constraint firstItem="amz-Sf-PvG" firstAttribute="leading" secondItem="ttx-r6-x5W" secondAttribute="leading" id="US8-VG-mmi"/>
+                            <constraint firstAttribute="bottom" secondItem="amz-Sf-PvG" secondAttribute="bottom" id="iRM-R5-lhX"/>
+                            <constraint firstItem="amz-Sf-PvG" firstAttribute="top" secondItem="1j0-wV-ur5" secondAttribute="bottom" constant="8" id="laI-pR-BHj"/>
+                            <constraint firstItem="1j0-wV-ur5" firstAttribute="top" secondItem="ttx-r6-x5W" secondAttribute="top" constant="8" id="sur-SD-oQN"/>
+                            <constraint firstAttribute="trailing" secondItem="amz-Sf-PvG" secondAttribute="trailing" id="yXd-2a-ASM"/>
+                            <constraint firstItem="Kse-92-Ogb" firstAttribute="centerY" secondItem="1j0-wV-ur5" secondAttribute="centerY" id="zzH-4N-oBR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="ttx-r6-x5W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="XRR-Fx-jJg"/>
+                    <constraint firstItem="ttx-r6-x5W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ney-t1-8m4"/>
+                    <constraint firstAttribute="bottom" secondItem="ttx-r6-x5W" secondAttribute="bottom" constant="8" id="ocG-Ck-dRb"/>
+                    <constraint firstAttribute="trailing" secondItem="ttx-r6-x5W" secondAttribute="trailing" constant="8" id="tbx-Ox-WmT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cardView" destination="ttx-r6-x5W" id="Kcr-8j-Gkj"/>
+                <outlet property="sendButton" destination="1j0-wV-ur5" id="mxr-Rw-l9I"/>
+                <outlet property="tableHeight" destination="A9R-pr-2Ts" id="dD3-Xu-jrZ"/>
+                <outlet property="tableView" destination="amz-Sf-PvG" id="cPP-Su-vMM"/>
+                <outlet property="textField" destination="Kse-92-Ogb" id="MRp-9J-KuT"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
